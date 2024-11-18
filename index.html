@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>34 Assignment</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body class="body-Class">
+
+    <span class="main-Heading">CONTACT&nbsp;PHONE&nbsp;BOOK </h1></span>
+    <h3 class="Contact-Book"> See The Number Of Contact Book 📲</h3>
+
+    <button class=" button btn" onclick="contactlist()">Contact list </button>
+
+    <div class="contact-Container">
+
+        <div id="container"></div>
+
+    </div>
+
+    <input type="text" class="input" id="contactInput"   placeholder="Add Contact Number"/>
+
+    <div class="btns-Div btn-Action">
+
+        <button class="button btn-Action" onclick="addContact()"> Add Number</button>&nbsp;&nbsp;&nbsp;
+        <button class="button btn-Action " onclick="removeNumber()"> Delete Number </button>
+
+    </div>
+    
+   <script>
+     const contact = [
+         "9284011752",
+         "3637485888",
+         "7434778377",
+     ]
+     function contactlist(){
+      const contactContainer = document.getElementById("container")
+      contactContainer.innerHTML = "";
+
+      for(let i=0; i<contact.length; i++){
+        contactContainer.innerHTML += `<div class ="contact-Card">${i+1}) ${contact[i]}<div>`
+      }
+     }
+     const addInput = document.getElementById("contactInput");
+
+     function addContact(){
+        contact.push(addInput.value)
+        addInput.value = ""
+        contactlist();
+     }
+      function removeNumber(){
+        const contactindex = contact.indexOf(addInput.value);
+        addInput.value = "";
+        contact.splice(contactindex,1)
+        contactlist();
+        
+      }
+   </script>
+</body>
+</html>
