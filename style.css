@@ -30,6 +30,8 @@
     margin: 0px 0px 0px 46%;
 }
 .contact-Container{
+    overflow-y: scroll;
+    height: 600px;
     width: 300px;
     background-color: rgb(18, 18, 18);
     border: 2px black solid;
