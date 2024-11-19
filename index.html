@@ -29,6 +29,20 @@
     </div>
     
    <script>
+
+      function getRandomEmojis(){
+        const emojis = [
+          '😊','😋','😉','😀','😃','😄','🤗',
+          '🤩','😑','🤨','😏','🫡'
+        ];
+
+        const min = 0;
+        const max = emojis.length - 1;
+
+        const randomIndex = Math.floor(Math.random() * (max - min + 1)) + min;
+    
+         return emojis[randomIndex]
+      }
      const contact = [
          "9284011752",
          "3637485888",
@@ -39,7 +53,7 @@
       contactContainer.innerHTML = "";
 
       for(let i=0; i<contact.length; i++){
-        contactContainer.innerHTML += `<div class ="contact-Card">${i+1}) ${contact[i]}<div>`
+        contactContainer.innerHTML += `<div class ="contact-Card"> ${getRandomEmojis()} ${i+1}) ${contact[i] } </div>`;
       }
      }
      const addInput = document.getElementById("contactInput");
@@ -53,8 +67,7 @@
         const contactindex = contact.indexOf(addInput.value);
         addInput.value = "";
         contact.splice(contactindex,1)
-        contactlist();
-        
+        contactlist();  
       }
    </script>
 </body>

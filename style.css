@@ -30,7 +30,6 @@
     margin: 0px 0px 0px 46%;
 }
 .contact-Container{
-    height: 500px;
     width: 300px;
     background-color: rgb(18, 18, 18);
     border: 2px black solid;
@@ -48,9 +47,9 @@
     width: 85%;
     background-color: antiquewhite;
     border: 2px black solid;
-    margin: 10px 0px 0px 20px;
+    margin: 10px 0px 10px 20px;
     border-radius: 5px;
-    padding: 5px 0px 0px 2px;
+    padding: 3px 0px 0px 2px;
 }
 .input{
     margin: 0px 0px 13px 44%;
